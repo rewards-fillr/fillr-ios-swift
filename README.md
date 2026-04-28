@@ -19,12 +19,12 @@ Both libraries include the shared `FillrSDK`, `FillrAPI`, and `FillrAnalytics` f
 
 ## Authentication
 
-The packages are hosted on a private JFrog Artifactory repository. Before adding the package, configure your credentials in `~/.netrc`:
+The packages are hosted on a private JFrog Artifactory repository. Before adding the package, use the Swift package registry login command:
 
-```
-machine fillr.jfrog.io
-login jfrog-username
-password jfrog-password
+```bash
+swift package-registry login https://fillr.jfrog.io/artifactory/api/swift/fillr-ios-swift \
+  --username jfrog-username \
+  --password jfrog-password
 ```
 
 Replace `jfrog-username` and `jfrog-password` with your provided credentials.
